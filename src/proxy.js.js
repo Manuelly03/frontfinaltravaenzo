@@ -7,7 +7,7 @@ export async function middleware(request) {
   const { pathname } = request.nextUrl;
 
   const sessionResponse = await fetch(
-    "http://localhost:5500/api/auth/get-session",
+    "http://localhost:5505/api/auth/get-session",
     {
       headers: {
         cookie: request.headers.get("cookie") ?? "",

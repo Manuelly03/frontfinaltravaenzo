@@ -22,20 +22,15 @@ const data = {
       icon: LayoutDashboard,
     },
     {
-      title: "Links",
-      url: "/links",
+      title: "Jogos",
+      url: "/jogos",
       icon: Link2,
-    },
-    {
-      title: "Analytics",
-      url: "/analytics",
-      icon: ChartBar,
     },
   ],
 };
 
 export function AppSidebar({ ...props }) {
-  const { data: session, isPending } = authClient.useSession();
+  const { data: session, isPending } = authClient.getSession();
   const user = session?.user
     ? {
         name: session.user.name ?? "Usuário",
